@@ -1,0 +1,7 @@
+//2.1 sin(pi*x).sin(pi*y) en P1 et P2
+
+mesh Th = square (4,5);
+fespace Vh(Th, P1); 
+func g = sin(pi*x)*sin(pi*y);
+Vh gh = g;
+plot(gh, fill=true, dim=3, wait=true); 

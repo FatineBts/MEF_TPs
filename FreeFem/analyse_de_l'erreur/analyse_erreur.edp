@@ -1,0 +1,5 @@
+  real h = 0.1     ;   // Diamètre des triangles (A modifier !)
+  int nx = floor(1/h); // Nombre de points en x
+  int ny = nx;         // Nombre de points en y (= Nbre de points en x)
+  mesh Th = square(nx, ny);
+  plot(Th, wait=1);    // Pour visualiser le maillage

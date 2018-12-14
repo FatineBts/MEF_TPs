@@ -1,0 +1,12 @@
+mesh Th = square (4,5);
+fespace Vh(Th, P1); //défini un élément fini P1-Lagrange, permet de calculer les solutions mais aussi d'interpoler toute fonction analytique
+//Après cela le nom devient un type Vh uh; 
+
+//P0 : constant par morceaux
+//P1 : linéaires par morceaux et égales à 1 sur un seul sommet (0 sur les autres)
+
+func g = x*x + y*y; // Définition de g
+Vh gh = g;          // Interpolation de g sur l'espace Vh
+plot(gh, fill=true, dim=3, wait=true); // Affichage
+
+//1.1 On observe que la fonction est découpée en morceaux (constant par morceaux) lorsqu'on remplace P1 par P0

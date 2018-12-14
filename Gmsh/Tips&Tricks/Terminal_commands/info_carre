@@ -1,0 +1,17 @@
+Info    : Running '/Users/fatine/Desktop/Maillage/Gmsh.app/Contents/MacOS/gmsh carre.geo -2' [Gmsh 4.0.6-git-7314c9e, 1 node, max. 1 thread]
+Info    : Started on Sun Nov 18 17:54:26 2018
+Info    : Reading 'carre.geo'...
+Info    : Done reading 'carre.geo'
+Info    : Meshing 1D...
+Info    : Meshing curve 1 (Line)
+Info    : Meshing curve 2 (Line)
+Info    : Meshing curve 3 (Line)
+Info    : Meshing curve 4 (Line)
+Info    : Done meshing 1D (0.000896 s)
+Info    : Meshing 2D...
+Info    : Meshing surface 1 (Plane, Delaunay)
+Info    : Done meshing 2D (0.001917 s)
+Info    : 13 vertices 28 elements
+Info    : Writing 'carre.msh'...
+Info    : Done writing 'carre.msh'
+Info    : Stopped on Sun Nov 18 17:54:26 2018

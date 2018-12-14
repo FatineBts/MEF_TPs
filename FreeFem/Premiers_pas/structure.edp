@@ -1,0 +1,20 @@
+mesh Th = square (4,5);
+fespace Vh(Th, P0); 
+
+Vh gh;
+gh[] = 1.0;
+
+plot(gh, dim = 3, wait=true, fill=true);
+
+cout << "gh[].n = " << gh[].n << ", Vh.ndof = " << Vh.ndof << endl;
+
+
+gh[][10] = 1.0;  // Mise à 1.0 du dof numéro 10
+
+//1. ddl P0 : 40 - nous avons autant de triangles que le ddl 
+//ddl P1 : 30 - nous avons autant de vertices (sommets) que le ddl 
+//ddl P2 : 99
+
+//2. On retrouve le graph du dirac. 
+
+//3. Un triangle du maillage est à 1 alors que les autres sont à 0 => discontinuité

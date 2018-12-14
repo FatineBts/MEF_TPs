@@ -1,0 +1,17 @@
+mesh Th = square (4,5);
+func f = x*x + y*y;
+fespace Vh(Th, P1); 
+
+Vh uh, vh;
+solve MonProbleme(uh,vh) = int2d(Th)(dx(uh)*dx(vh)) + int2d(Th)(dy(uh)*dy(vh)) + int2d(Th)(uh*vh) - int2d(Th)(f*vh);
+plot(uh,fill=true);
+
+
+/*
+varf MonProbleme2(uh, vh) = int2d(Th)(dx(uh)*dx(vh)) + int2d(Th)(dy(uh)*dy(vh)) + int2d(Th)(uh*vh) - int2d(Th)(f*vh); 
+matrix A = MonProbleme2(Vh, Vh);
+Vh b, solution;
+b[] = MonProbleme2(0, Vh);
+solution[] = A^-1 * b[];
+plot(solution, wait = true, cmm = "Solution", value = true, fill = true, dim = 3);
+*/
